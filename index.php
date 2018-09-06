@@ -7,8 +7,8 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 	
-	var_dump($json);
-	$text = $json->result->parameters->text;
+	//var_dump($json);
+	$text = $json->queryResult->parameters->text;
 
 	switch ($text) {
 		case 'hi':
