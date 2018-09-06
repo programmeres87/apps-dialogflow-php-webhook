@@ -31,7 +31,7 @@ if($method == 'POST'){
 	}
 
 	$response = new \stdClass();
-	$response->fulfillmentMessages->text[] = $fulfillmentText;
+	$response->fulfillmentMessages = array($fulfillmentText);
 	//$response->displayText = $fulfillmentText;
 	//$response->source = "webhook";
 	echo json_encode($response);
