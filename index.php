@@ -9,6 +9,8 @@ if($method == 'POST'){
 	
 	//var_dump($json);
 	$text = $json->queryResult->parameters->text;
+	
+	echo $text;
 
 	switch ($text) {
 		case 'hi':
