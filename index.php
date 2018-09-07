@@ -31,7 +31,7 @@ if ($method == 'POST') {
 			break;
 	}
 	*/
-	$fulfillmentText = "We have " . rand(9999) . " apartment listings at " . $paramGeoCity . " with " . $paramBedroom;
+	$fulfillmentText = "We have " . rand(1, 1000) . " apartment listings at " . $paramGeoCity . " with " . $paramBedroom;
 	
 	$response = new \stdClass();
 	$response->fulfillmentText = $fulfillmentText;
