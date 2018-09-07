@@ -7,6 +7,8 @@ if ($method == 'POST') {
 	
 	$paramGeoCity = $json->queryResult->parameters->geo_city;
 	$paramBedroom = $json->queryResult->parameters->bedroom;
+	
+	echo $paramGeoCity . " ~ " . $paramBedroom;
 	/*
 	echo $paramGeoCity;
 
