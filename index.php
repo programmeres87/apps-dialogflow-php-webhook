@@ -5,7 +5,7 @@ if ($method == 'POST') {
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 	
-	$paramGeoCity = $json->queryResult->parameters->geo_city;
+	$paramGeoCity = $json->queryResult->parameters->geo-city;
 	$paramBedroom = $json->queryResult->parameters->bedroom;
 	
 	echo $paramGeoCity . " ~ " . $paramBedroom;
