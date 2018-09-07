@@ -8,7 +8,7 @@ if ($method == 'POST') {
 	$paramGeoCity = $json->queryResult->queryText;
 	$paramBedroom = $json->queryResult->parameters->bedroom;
 	
-	echo $paramGeoCity . " ~ " . $paramBedroom;
+	//echo $paramGeoCity . " ~ " . $paramBedroom;
 	/*
 	echo $paramGeoCity;
 
@@ -31,7 +31,7 @@ if ($method == 'POST') {
 			break;
 	}
 	*/
-	$fulfillmentText = "We have 33 apartment listings at " . $paramGeoCity . "with " . $paramBedroom;
+	$fulfillmentText = "We have 33 apartment listings at " . $paramGeoCity . " with " . $paramBedroom;
 	
 	$response = new \stdClass();
 	$response->fulfillmentText = $fulfillmentText;
