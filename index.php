@@ -7,6 +7,7 @@ if ($method == 'POST') {
 	
 	$paramGeoCity = $json->queryResult->parameters->geo_city;
 	
+	/*
 	echo $paramGeoCity;
 
 	//echo $text;
@@ -27,6 +28,9 @@ if ($method == 'POST') {
 			$fulfillmentText = "Sorry, I didnt get that. Please ask me something else.";
 			break;
 	}
+	*/
+	$fullfilmentText = "We have 33 apartment listings below, which is the most suitable for you?";
+	
 	$response = new \stdClass();
 	$response->fulfillmentText = $fulfillmentText;
 	//$response->displayText = $fulfillmentText;
