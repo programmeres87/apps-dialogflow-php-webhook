@@ -6,7 +6,7 @@ if ($method == 'POST') {
 	$json = json_decode($requestBody);
 	
 	$paramGeoCity = $json->queryResult->parameters->geo_city;
-	
+	$paramBedroom = $json->queryResult->parameters->bedroom;
 	/*
 	echo $paramGeoCity;
 
@@ -29,7 +29,7 @@ if ($method == 'POST') {
 			break;
 	}
 	*/
-	$fullfilmentText = "We have 33 apartment listings below, which is the most suitable for you?";
+	$fulfillmentText = "We have 33 apartment listings at " . $paramGeoCity . "with " . $paramBedroom;
 	
 	$response = new \stdClass();
 	$response->fulfillmentText = $fulfillmentText;
